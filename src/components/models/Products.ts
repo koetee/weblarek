@@ -2,7 +2,7 @@ import type { IProduct } from '../../types';
 
 export class Products {
     private items: IProduct[] = [];
-    private selected?: IProduct;
+    private selected: IProduct | null = null;
 
     setItems(items: IProduct[]): void {
         this.items = [...items];
@@ -20,7 +20,7 @@ export class Products {
         this.selected = product;
     }
 
-    getSelected(): IProduct | undefined {
+    getSelected(): IProduct | null {
         return this.selected;
     }
 }
